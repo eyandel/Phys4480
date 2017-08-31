@@ -1,4 +1,5 @@
 #include <vector>
+#include <math.h>
 #include "nr3.h"
 using namespace std;
 
@@ -28,6 +29,8 @@ void hw1(){
   VecDoub r1(2);
   r1[0] = b[0]-(a[0][0]*x1[0]+a[0][1]*x1[1]);
   r1[1] = b[1]-(a[1][0]*x1[0]+a[1][1]*x1[1]);
+  double r1norm=sqrt(r1[0]+r1[1]);
+  std::cout<<r1norm<<std::endl;
   
   VecDoub r2(2);
   r2[0] = b[0]-(a[0][0]*x2[0]+a[0][1]*x2[1]);
