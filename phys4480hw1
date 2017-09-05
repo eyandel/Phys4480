@@ -1,0 +1,40 @@
+1a.
+r1 = 1.87425e-07
+r2 = 8.57282e-10
+
+x1 is the more accurate solution but has a larger residual.
+
+1b.
+xlu = (1.00217, -1.00295)
+LU decomp error = 0.00366587
+residual for LU Decomp = 6.20634e-17
+
+You do not get the full machine accuracy in this solution since I have it set to round doubles after 8 decimal places
+and it is possible to get accuracy beyond that.
+
+The residual is significantly smaller than the error by a factor of 14.
+
+1c.
+Cond(A) = 9.03064e+13
+
+The condition number of A is very large. Since the relative error in the solution is approximately cond(A) times the relative
+error in the residual, this would explain why the two errors are so far off in parts a and b.
+
+2a.
+r=568467
+
+2b.
+r=116681
+
+2c.
+r=116681
+
+2d.
+There is about a factor of 5 difference in the errors of the LU and inverse methods which is a slightly bigger difference
+than I would expect based on the number of floating point operations required of the algorithms (the two have a difference
+of only about 3 in floating point operations).
+
+Cond(A)=17778
+
+The condition number of A is relatively high (in the ten thousands) so I am not surprised that the errors are also
+relatively high (in the hundred thousands).
